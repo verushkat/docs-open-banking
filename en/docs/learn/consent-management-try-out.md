@@ -14,12 +14,12 @@ This document provides the instructions to try out consent initiation, retrieval
 - In this step, the API consumer creates a request to get the consent of the customer to access the accounts and its 
 information from the bank. A sample consent initiation request looks as follows:
 
-    ```
+   ```
    curl --location --request POST 'https://<APIM_HOST>:8243/open-banking/v3.1/aisp/account-access-consents' \
---header 'Authorization: Bearer <APPLICATION_ACCESS_TOKEN>' \
---header 'Content-Type: application/json' \
---cert <TRANSPORT_PUBLIC_KEY_FILE_PATH> --key <TRANSPORT_PRIVATE_KEY_FILE_PATH> \
---data-raw '{
+   --header 'Authorization: Bearer <APPLICATION_ACCESS_TOKEN>' \
+   --header 'Content-Type: application/json' \
+   --cert <TRANSPORT_PUBLIC_KEY_FILE_PATH> --key <TRANSPORT_PRIVATE_KEY_FILE_PATH> \
+   --data-raw '{
    "Data":{
       "Permissions": [
         "ReadAccountsDetail",
@@ -32,9 +32,9 @@ information from the bank. A sample consent initiation request looks as follows:
    },
    "Risk":{
 
-   }
-}'
-    ```
+     }
+   }'
+   ```
   
 - The response contains a Consent ID. A sample response looks as follows:
 
